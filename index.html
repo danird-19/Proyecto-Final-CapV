@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canelita - Comida Criolla Peruana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- BARRA DE NAVEGACION -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-canelita shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-fire"></i> Canelita
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="bi bi-house"></i> Inicio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="carta.html">
+                            <i class="bi bi-journal-bookmark"></i> Carta
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tareas.html">
+                            <i class="bi bi-list-task"></i> Tareas
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO / PORTADA -->
+    <header class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative z-1">
+            <div class="hero-content">
+                <span class="hero-badge mb-3 d-inline-block">
+                    <i class="bi bi-star-fill"></i> Comida Criolla Peruana
+                </span>
+                <h1 class="hero-title mb-3">Restaurante <span class="text-gold">Canelita</span></h1>
+                <p class="hero-subtitle mb-4">
+                    Sabores ancestrales del Peru, preparados con amor y las mejores especias.
+                    Descubre nuestra carta de platos criollos que enamoran el paladar.
+                </p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a href="carta.html" class="btn btn-canelita btn-lg px-4">
+                        <i class="bi bi-journal-bookmark"></i> Ver Carta
+                    </a>
+                    <a href="#platillos" class="btn btn-outline-light btn-lg px-4">
+                        <i class="bi bi-arrow-down"></i> Nuestros Platos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCION: NUESTROS PLATILLOS DESTACADOS -->
+    <section id="platillos" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title-dark">
+                    <i class="bi bi-fire"></i> Nuestros Platos Destacados
+                </h2>
+                <p class="text-muted mt-3 fs-5">
+                    Los favoritos de nuestros comensales, preparados con ingredientes frescos y recetas tradicionales.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Plato 1: Ceviche -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dish-card border-0 shadow-sm h-100">
+                        <div class="dish-image-wrapper position-relative">
+                            <!-- Reemplaza src con la URL de tu imagen -->
+                            <img src="https://images.unsplash.com/photo-1535399831218-d5bd36d1a6b3?w=600&h=400&fit=crop"
+                                 alt="Ceviche de Pescado" class="dish-img" loading="lazy">
+                            <span class="dish-badge badge bg-danger">Popular</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="dish-name">Ceviche de Pescado</h5>
+                            <p class="dish-desc text-muted">
+                                Pescado fresco marinado en jugo de limon con cebolla morada, cilantro, aji limo y choclo.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="dish-price">S/ 28.00</span>
+                                <span class="dish-tag badge bg-canelita-subtle text-canelita-emphasis">
+                                    <i class="bi bi-fire"></i> Tradicional
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plato 2: Lomo Saltado -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dish-card border-0 shadow-sm h-100">
+                        <div class="dish-image-wrapper position-relative">
+                            <img src="https://static.wixstatic.com/media/9755d8_b2d98eade0814b17a67fdf7d95888fdc~mv2.png/v1/fill/w_1280,h_720,al_c/9755d8_b2d98eade0814b17a67fdf7d95888fdc~mv2.png"
+                                 alt="Lomo Saltado" class="dish-img" loading="lazy">
+                            <span class="dish-badge badge bg-warning text-dark">Chef Recomienda</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="dish-name">Lomo Saltado</h5>
+                            <p class="dish-desc text-muted">
+                                Trozos de lomo fino salteados con tomate, cebolla, aji amarillo, salsa de soya y vinagre balsamico.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="dish-price">S/ 38.00</span>
+                                <span class="dish-tag badge bg-canelita-subtle text-canelita-emphasis">
+                                    <i class="bi bi-award"></i> Especial
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plato 3: Aji de Gallina -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dish-card border-0 shadow-sm h-100">
+                        <div class="dish-image-wrapper">
+                            <img src="https://www.ajinomoto.com.pe:8085/img/receta/121.-Aji-de-Gallina.jpg"
+                                 alt="Aji de Gallina" class="dish-img" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="dish-name">Aji de Gallina</h5>
+                            <p class="dish-desc text-muted">
+                                Deshebrada de gallina en cremosa salsa de aji amarillo, pan remojado en leche, con arroz y papas.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="dish-price">S/ 30.00</span>
+                                <span class="dish-tag badge bg-canelita-subtle text-canelita-emphasis">
+                                    <i class="bi bi-heart"></i> Clasico
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plato 4: Causa Limeña -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dish-card border-0 shadow-sm h-100">
+                        <div class="dish-image-wrapper">
+                            <img src="https://blog.renaware.com/wp-content/uploads/2024/04/Causa-Limena-02.jpg"
+                                 alt="Causa Limeña" class="dish-img" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="dish-name">Causa Limeña</h5>
+                            <p class="dish-desc text-muted">
+                                Capas de papa amarilla sazonada con aji amarillo, rellena de atun o pollo, con mayonesa y palta.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="dish-price">S/ 25.00</span>
+                                <span class="dish-tag badge bg-canelita-subtle text-canelita-emphasis">
+                                    <i class="bi bi-star"></i> Frio
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plato 5: Rocoto Relleno -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dish-card border-0 shadow-sm h-100">
+                        <div class="dish-image-wrapper position-relative">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXkRv3WwGYOEmuGha6d9nHSWfLxdgxwYHAflyCp04lKp5h1mjrJZ1F6BN5&s=10"
+                                 alt="Rocoto Relleno" class="dish-img" loading="lazy">
+                            <span class="dish-badge badge bg-danger">Picante</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="dish-name">Rocoto Relleno</h5>
+                            <p class="dish-desc text-muted">
+                                Rocoto relleno de carne molida especiada con arroz blanco y queso gratinado al horno.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="dish-price">S/ 35.00</span>
+                                <span class="dish-tag badge bg-canelita-subtle text-canelita-emphasis">
+                                    <i class="bi bi-thermometer-half"></i> Especial
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plato 6: Arroz con Pollo -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card dish-card border-0 shadow-sm h-100">
+                        <div class="dish-image-wrapper">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3QdEKca8VVsUa88UWH-Dnk7UOBnmzxkZ9wIjO_4Nki4bRQ9mDdmSc3OHd&s=10"
+                                 alt="Arroz con Pollo" class="dish-img" loading="lazy">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="dish-name">Arroz con Pollo</h5>
+                            <p class="dish-desc text-muted">
+                                Arroz verde preparado con cilantro, trozos de pollo jugoso, verduras frescas y cerveza artesanal.
+                            </p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="dish-price">S/ 27.00</span>
+                                <span class="dish-tag badge bg-canelita-subtle text-canelita-emphasis">
+                                    <i class="bi bi-emoji-smile"></i> Casero
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boton ver carta completa -->
+            <div class="text-center mt-5">
+                <a href="carta.html" class="btn btn-canelita btn-lg px-5">
+                    <i class="bi bi-journal-bookmark"></i> Ver Carta Completa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION: SOBRE NOSOTROS -->
+    <section class="py-5 bg-warm">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title-dark mb-4">
+                        <i class="bi bi-shop"></i> Sobre Nosotros
+                    </h2>
+                    <p class="lead text-muted">
+                        En <strong>Canelita</strong> creemos que la comida peruana es una de las mas ricas del mundo.
+                    </p>
+                    <p class="text-muted">
+                        Nuestro restaurante lleva mas de 10 anos sirviendo los sabores mas autenticos de la
+                        gastronomia criolla peruana. Cada platillo es preparado con ingredientes frescos del dia,
+                        siguiendo recetas transmitidas de generacion en generacion.
+                    </p>
+                    <div class="row g-3 mt-3">
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-canelita fs-4"></i>
+                                <span class="fw-semibold">Ingredientes Frescos</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-canelita fs-4"></i>
+                                <span class="fw-semibold">Recetas Tradicionales</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-canelita fs-4"></i>
+                                <span class="fw-semibold">Chef Profesional</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-check-circle-fill text-canelita fs-4"></i>
+                                <span class="fw-semibold">Ambiente Familiar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image-card">
+                        <div class="about-emoji-grid">
+                            <span class="about-emoji">🍲</span>
+                            <span class="about-emoji">🫕</span>
+                            <span class="about-emoji">🥘</span>
+                            <span class="about-emoji">🍳</span>
+                        </div>
+                        <div class="about-info mt-4 text-center">
+                            <h5 class="fw-bold text-canelita">Mas de 10 Anos de Experiencia</h5>
+                            <p class="text-muted mb-0">Sirviendo con pasion la mejor comida criolla del Peru</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION: INFORMACION DE CONTACTO -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title-dark">
+                    <i class="bi bi-geo-alt"></i> Visitanos
+                </h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="card contact-card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="bi bi-geo-alt-fill contact-icon"></i>
+                            <h5 class="mt-3">Direccion</h5>
+                            <p class="text-muted mb-0">Av. Grau 123, Centro Historico<br>Lima, Peru</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card contact-card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="bi bi-clock-fill contact-icon"></i>
+                            <h5 class="mt-3">Horario</h5>
+                            <p class="text-muted mb-0">Lunes a Sabado<br>12:00 PM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card contact-card border-0 shadow-sm text-center h-100">
+                        <div class="card-body p-4">
+                            <i class="bi bi-telephone-fill contact-icon"></i>
+                            <h5 class="mt-3">Reservas</h5>
+                            <p class="text-muted mb-0">+51 999 888 777<br>reservas@canelita.pe</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-1">
+                <i class="bi bi-fire"></i> <strong>Restaurante Canelita</strong> - Comida Criolla Peruana
+            </p>
+            <p class="mb-0 text-muted small">
+                Proyecto Universitario &copy; 2026
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
