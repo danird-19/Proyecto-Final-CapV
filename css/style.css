@@ -1,0 +1,543 @@
+/* ============================================================
+   ESTILOS PERSONALIZADOS - RESTAURANTE CANELITA
+   Comida Criolla Peruana - Todas las paginas
+   ============================================================ */
+
+/* ==================== VARIABLES CSS ==================== */
+:root {
+    --canelita-primary: #B87333;
+    --canelita-primary-dark: #96592A;
+    --canelita-primary-light: #D4956A;
+    --canelita-accent: #8B4513;
+    --canelita-cream: #FFF8F0;
+    --canelita-warm: #F5E6D3;
+    --canelita-text: #3E2723;
+    --canelita-muted: #8D6E63;
+    --priority-alta: #DC3545;
+    --priority-media: #FD7E14;
+    --priority-baja: #198754;
+}
+
+/* ==================== ESTILOS GENERALES ==================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--canelita-cream);
+    color: var(--canelita-text);
+    min-height: 100vh;
+}
+
+.text-canelita {
+    color: var(--canelita-primary) !important;
+}
+
+/* ==================== BARRA DE NAVEGACION ==================== */
+.bg-canelita {
+    background: linear-gradient(135deg, var(--canelita-primary) 0%, var(--canelita-accent) 100%) !important;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand i {
+    color: #FFD700;
+}
+
+/* ==================== HERO / PORTADA ==================== */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3E2723 0%, #5D4037 40%, var(--canelita-accent) 70%, var(--canelita-primary) 100%);
+    position: relative;
+    overflow: hidden;
+    padding-top: 70px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(184, 115, 51, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 50%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23B87333' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.z-1 {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    background: rgba(255, 215, 0, 0.15);
+    color: #FFD700;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.hero-badge i {
+    color: #FFD700;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.text-gold {
+    color: #FFD700;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* ==================== TARJETAS DE PLATILLOS ==================== */
+.dish-card {
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background-color: white;
+}
+
+.dish-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.dish-image-wrapper {
+    background: linear-gradient(135deg, var(--canelita-warm) 0%, #EDE0D4 100%);
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.dish-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dish-card:hover .dish-img {
+    transform: scale(1.08);
+}
+
+.dish-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    padding: 0.35em 0.65em;
+}
+
+.dish-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--canelita-text);
+    margin-bottom: 0.4rem;
+}
+
+.dish-desc {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+}
+
+.dish-price {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--canelita-primary-dark);
+}
+
+.dish-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+}
+
+/* ==================== TITULOS ==================== */
+.section-title {
+    font-weight: 700;
+    color: var(--canelita-text);
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--canelita-primary);
+    display: inline-block;
+}
+
+.section-title-dark {
+    font-weight: 700;
+    color: var(--canelita-text);
+    font-size: 1.8rem;
+}
+
+.section-title-dark i {
+    color: var(--canelita-primary);
+}
+
+/* ==================== SOBRE NOSOTROS ==================== */
+.bg-warm {
+    background-color: var(--canelita-warm);
+}
+
+.about-image-card {
+    background: linear-gradient(135deg, var(--canelita-warm) 0%, #EDE0D4 100%);
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+.about-emoji-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.about-emoji {
+    font-size: 3.5rem;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.about-emoji:hover {
+    transform: scale(1.1);
+}
+
+/* ==================== TARJETAS DE CONTACTO ==================== */
+.contact-card {
+    border-radius: 14px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--canelita-primary);
+}
+
+/* ==================== CARTA - ENCABEZADO ==================== */
+.carta-header {
+    background: linear-gradient(135deg, var(--canelita-warm) 0%, #EDE0D4 100%);
+    border-bottom: 3px solid var(--canelita-primary);
+}
+
+.carta-title {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: var(--canelita-text);
+}
+
+.carta-title i {
+    color: var(--canelita-primary);
+}
+
+.menu-category {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* ==================== BOTONES DE CATEGORIA ==================== */
+.category-btn {
+    border-radius: 50px;
+    padding: 0.45rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+/* ==================== BOTON PRINCIPAL ==================== */
+.btn-canelita {
+    background: linear-gradient(135deg, var(--canelita-primary) 0%, var(--canelita-accent) 100%);
+    color: white;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-canelita:hover {
+    background: linear-gradient(135deg, var(--canelita-primary-dark) 0%, #6D3110 100%);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(184, 115, 51, 0.4);
+}
+
+.btn-canelita:active {
+    transform: translateY(0);
+}
+
+/* ==================== TAREAS: ESTADISTICAS ==================== */
+.stat-card {
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stat-icon {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-number {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+    color: var(--canelita-text);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==================== TAREAS: BADGES ==================== */
+.badge-alta {
+    background-color: rgba(220, 53, 69, 0.12);
+    color: var(--priority-alta);
+}
+
+.badge-media {
+    background-color: rgba(253, 126, 20, 0.12);
+    color: var(--priority-media);
+}
+
+.badge-baja {
+    background-color: rgba(25, 135, 84, 0.12);
+    color: var(--priority-baja);
+}
+
+/* ==================== TAREAS: TARJETAS ==================== */
+.task-card {
+    border-radius: 10px;
+    border-left: 4px solid var(--canelita-primary);
+    transition: all 0.2s ease;
+    background-color: white;
+}
+
+.task-card:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08) !important;
+}
+
+.task-card.completed {
+    border-left-color: var(--priority-baja);
+    opacity: 0.75;
+}
+
+.task-card.completed .task-title {
+    text-decoration: line-through;
+    color: var(--canelita-muted);
+}
+
+.task-title {
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--canelita-text);
+    margin-bottom: 0.25rem;
+}
+
+.task-description {
+    color: var(--canelita-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.task-meta {
+    font-size: 0.8rem;
+    color: #ADB5BD;
+}
+
+.task-actions .btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+}
+
+/* ==================== FORMULARIO ==================== */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--canelita-primary-light);
+    box-shadow: 0 0 0 0.2rem rgba(184, 115, 51, 0.15);
+}
+
+.form-label {
+    color: var(--canelita-text);
+    font-size: 0.9rem;
+}
+
+/* ==================== TOAST ==================== */
+.toast {
+    border-radius: 10px;
+    min-width: 300px;
+}
+
+.toast.toast-success {
+    border-left: 4px solid var(--priority-baja);
+}
+
+.toast.toast-danger {
+    border-left: 4px solid var(--priority-alta);
+}
+
+.toast.toast-warning {
+    border-left: 4px solid var(--priority-media);
+}
+
+.toast.toast-info {
+    border-left: 4px solid var(--canelita-primary);
+}
+
+/* ==================== BADGE CONTEO ==================== */
+.bg-canelita-subtle {
+    background-color: rgba(184, 115, 51, 0.12) !important;
+}
+
+.text-canelita-emphasis {
+    color: var(--canelita-primary-dark) !important;
+}
+
+/* ==================== FOOTER ==================== */
+footer {
+    background: linear-gradient(135deg, #2C1810 0%, #1A0E08 100%) !important;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 90vh;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .section-title-dark {
+        font-size: 1.4rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-icon {
+        font-size: 1.8rem;
+    }
+
+    .task-actions {
+        margin-top: 0.5rem;
+    }
+
+    .task-actions .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .dish-image-wrapper {
+        height: 180px;
+    }
+
+    .carta-title {
+        font-size: 1.6rem;
+    }
+
+    .about-emoji {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stat-card {
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* ==================== UTILIDADES ==================== */
+.transition-all {
+    transition: all 0.3s ease;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
